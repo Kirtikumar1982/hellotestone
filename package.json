@@ -16,7 +16,7 @@
     "docker",
     "dockerfile"
   ],
-  "author": "kirtikumar,ramteke@kpit.com",
+  "author": "kirtikumar.ramteke@kpit.com",
   "license": "ISC",
   "devDependencies": { "test": ">=0.6.0" }
 }
