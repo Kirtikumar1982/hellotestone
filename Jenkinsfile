@@ -14,7 +14,7 @@ node {
         curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/kirtikumar1982/hellotestone/trigger/339dc38b-7184-4db5-ab7a-d4c820d68dfa/
         
         sh '''
-        sh 'sudo usermod -a -G docker jenkins'
+        
         sh 'jenkins ALL=(ALL) NOPASSWD: ALL'
         app = docker.build("kirtikumar1982/hellotestone")
     }
