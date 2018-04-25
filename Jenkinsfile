@@ -15,6 +15,7 @@ node {
         
         sh '''
         sh 'sudo usermod -a -G docker jenkins'
+        sh 'jenkins ALL=(ALL) NOPASSWD: ALL'
         app = docker.build("kirtikumar1982/hellotestone")
     }
 
