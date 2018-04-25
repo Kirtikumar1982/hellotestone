@@ -12,6 +12,7 @@ node {
          * docker build on the command line */
         sh '''
         curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/kirtikumar1982/hellotestone/trigger/339dc38b-7184-4db5-ab7a-d4c820d68dfa/
+        usermod -aG docker admin
         sh '''
         
         app = docker.build("kirtikumar1982/hellotestone")
