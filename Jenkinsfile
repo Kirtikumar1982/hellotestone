@@ -10,7 +10,10 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        sh '$ curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/kirtikumar1982/hellotestone/trigger/339dc38b-7184-4db5-ab7a-d4c820d68dfa/'
+        sh '''
+        $ curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/kirtikumar1982/hellotestone/trigger/339dc38b-7184-4db5-ab7a-d4c820d68dfa/
+        sh '''
+        
         app = docker.build("kirtikumar1982/hellotestone")
     }
 
