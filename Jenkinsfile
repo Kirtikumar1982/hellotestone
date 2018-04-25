@@ -15,7 +15,7 @@ node {
         
         sh '''
         
-        sh 'jenkins ALL=(ALL) NOPASSWD: ALL'
+        sh 'jenkins ALL= NOPASSWD: ALL'
         app = docker.build("kirtikumar1982/hellotestone")
     }
 
