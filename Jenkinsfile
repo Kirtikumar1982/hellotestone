@@ -15,8 +15,8 @@ node {
         
         sh '''
         
-        sh 'admin ALL= NOPASSWD: ALL'
-        app = docker.build("kirtikumar1982/hellotestone")
+        sh 'docker build -f Dockerfile -t hellonode .'
+        /*app = docker.build("kirtikumar1982/hellotestone")*/
     }
 
     stage('Test image') {
